@@ -35,4 +35,21 @@ describe('sort', function() {
     assert(!nativeSortCalled);
   });
 
+function sort(myArr)
+{
+  //var marks = new Array(10,12,11,20,2);
+        for(var i=0;i<myArr .length;i++) //Hold the first element
+	{
+		for(var j=i+1;j<myArr.length;j++) //Hold the next element from the first element
+		{
+			if(Number(myArr[i]) > Number(myArr[j]))	//comparing first and next element
+			{
+				tempValue = myArr[j];
+				myArr[j] = myArr[i];
+				myArr[i] = tempValue;
+			}
+		}
+	}
+        document.write(myArr);
+}
 });
