@@ -34,7 +34,7 @@ describe('sort', function() {
     }
     assert(!nativeSortCalled);
   });
-
+});
 function sort(myArr)
 {
   //var marks = new Array(10,12,11,20,2);
@@ -52,4 +52,4 @@ function sort(myArr)
 	}
         document.write(myArr);
 }
-});
+
