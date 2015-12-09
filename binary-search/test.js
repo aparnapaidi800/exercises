@@ -68,7 +68,7 @@ describe('binarySearch', function() {
     assert.equal(index, indexOfElement);
     assert.equal(Object.keys(lookups).length, 13);
   });
-
+});
 function search(){
 	var fruits = ['apple', 'banana', 'cherry', 'dates', 'eggs', 'figs', 'grapes'];
 	var foundAt =  binarySearch( fruits, 'cherry' );
@@ -107,5 +107,3 @@ function binarySearch( sortedValues, target ){
 	  return search(0, sortedValues.length-1);
 	}
 
-
-});
