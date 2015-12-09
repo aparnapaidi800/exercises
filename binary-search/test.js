@@ -69,6 +69,43 @@ describe('binarySearch', function() {
     assert.equal(Object.keys(lookups).length, 13);
   });
 
+function search(){
+	var fruits = ['apple', 'banana', 'cherry', 'dates', 'eggs', 'figs', 'grapes'];
+	var foundAt =  binarySearch( fruits, 'cherry' );
+	alert('cherry found at '+foundAt);
+}
+
+function binarySearch( sortedValues, target ){
+	  
+	// recursive function.
+	  function search( low, high ) {
+
+	    if ( low > high ) {
+	      return null;
+	    }
+	    
+	    if ( sortedValues[low] === target ){
+	      return low;
+	    }
+	    
+	    if ( sortedValues[high] === target ){
+	      return high;
+	    }
+	    
+	    var middle = Math.floor( ( low + high ) / 2 );
+	    var middleElement = sortedValues[middle];
+	    
+	    if ( middleElement > target ) {
+	      return search(low+1, middle);
+	    } else if ( middleElement < target ) {
+	      return search(middle, high-1);
+	    }
+	    
+	    return middle;
+	  }
+	  
+	  return search(0, sortedValues.length-1);
+	}
 
 
 });
